@@ -18,3 +18,15 @@ VALUES
     ('Classic Latte', 'Latte', 4, 4, 8.0),
     ('Mocha Madness', 'Mocha', 8, 7, 9.6),
     ('Mocha Light', 'Mocha', 8, 4, 7.7);
+
+
+-- Get a summary of the coffee drinks grouped by coffee type
+SELECT
+    coffee_type,
+    AVG(strength) AS avg_strength,
+    AVG(sweetness) AS avg_sweetness,
+    AVG(customer_rating) AS avg_rating,
+    MAX(customer_rating) AS max_rating,
+    MIN(customer_rating) AS min_rating
+FROM coffee_dataset.coffee_table
+GROUP BY coffee_type;
