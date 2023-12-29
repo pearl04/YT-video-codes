@@ -28,5 +28,5 @@ SELECT
     AVG(customer_rating) AS avg_rating,
     MAX(customer_rating) AS max_rating,
     MIN(customer_rating) AS min_rating
-FROM coffee_dataset.coffee_table
+FROM videos-408723.sample_data.coffee_table
 GROUP BY coffee_type;
